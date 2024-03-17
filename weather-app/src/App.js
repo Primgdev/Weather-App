@@ -1,8 +1,7 @@
 import { useState } from "react";
-
+import { WiStrongWind } from "react-icons/wi";
+import { WiHumidity } from "react-icons/wi";
 import axios from "axios";
-
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -39,29 +38,22 @@ function App() {
           Search
         </button>
       </div>
-      <div className="result">
+      <div className="result" >
         {/* <div className="icon">{weatherData.current?.condition?.icon}</div> */}
+        
         <div className="area">{weatherData.location?.country}</div>
         <div className="temp">{weatherData.current?.temp_c}</div>
-        <div className="condition">{weatherData.current?.condition?.text}</div>
+        <div className="condition"> {weatherData.current?.condition?.text}</div>
         <div className="detail">
-          <p className="wind">
-            Wind
+          <p className="wind"><WiStrongWind />
+        Wind: {}
             {weatherData.current?.wind_kph}
           </p>
-          <p className="humidity">
-            Humidity
+          <p className="humidity"><WiHumidity/>
+            Humidity: {}
             {weatherData.current?.humidity}
           </p>
-          <p className="visibility">
-          Visibility 
-          {weatherData.current?.vis_km}
-        </p>
-        <p className="uv">
-          UV
-          {weatherData.current?.uv}
-        </p>
-        </div>
+          </div>
 
         
       </div>
