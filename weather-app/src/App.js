@@ -27,6 +27,7 @@ function App() {
       <h1>Weather App</h1>
       <div className="search_bar">
         <input
+          className="searchInput"
           type="text"
           placeholder="Sydney"
           value={location}
@@ -34,18 +35,35 @@ function App() {
             handleChange(e);
           }}
         ></input>
-        <button type="submit" onClick={handleSubmit}>
+        <button className="searchButton" type="submit" onClick={handleSubmit}>
           Search
         </button>
       </div>
       <div className="result">
-        <div className="area" >{weatherData.location?.country}</div>
+        {/* <div className="icon">{weatherData.current?.condition?.icon}</div> */}
+        <div className="area">{weatherData.location?.country}</div>
         <div className="temp">{weatherData.current?.temp_c}</div>
+        <div className="condition">{weatherData.current?.condition?.text}</div>
         <div className="detail">
-          <p>wind <br></br>{weatherData.current?.wind_kph}</p>
-          <p>humidity<br></br>{weatherData.current?.humidity}</p>
-
+          <p className="wind">
+            Wind
+            {weatherData.current?.wind_kph}
+          </p>
+          <p className="humidity">
+            Humidity
+            {weatherData.current?.humidity}
+          </p>
+          <p className="visibility">
+          Visibility 
+          {weatherData.current?.vis_km}
+        </p>
+        <p className="uv">
+          UV
+          {weatherData.current?.uv}
+        </p>
         </div>
+
+        
       </div>
     </div>
   );
