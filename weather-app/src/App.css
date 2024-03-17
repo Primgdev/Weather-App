@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -13,14 +12,11 @@
   src: url(Font/Paris\ Avenue\ DEMO.ttf);
 } */
 
-
 .App {
   width: 300px;
-  margin:auto;
-  margin-top:10px;
-  border:2px solid black;
+  margin: auto;
+  margin-top: 15px;
   border-radius: 50px;
-  
 }
 
 .search_bar {
@@ -29,47 +25,41 @@
   justify-content: center;
   gap: 5px;
   margin: 5px;
-  font-family:myFirstFont;
-
 }
 
-.searchInput
-{
+.title {
+ padding-top: 20px;
+}
+
+.searchInput {
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
   width: 150px;
+  padding-left: 15px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border: 0.1px;
 }
 
-
-
-.searchButton
-{
+.searchButton {
   border-radius: 10px;
   background-color: white;
-
-
 }
 
 .result {
-  
   color: black;
-  margin:auto;
+  margin: auto;
   line-height: 30px;
   height: 100%;
   /* font-family: url(Font/Paris\ Avenue\ DEMO.ttf); */
-  
 }
 
-.detail
-{
-
+.detail {
   margin-top: 50px;
-  padding:10px;
-  gap:50px;
+  padding: 10px;
+  gap: 50px;
 }
 
-.area
-{
+.area {
   font-size: 30px;
   margin: auto;
   margin-top: 20px;
@@ -77,31 +67,24 @@
   letter-spacing: 1px;
 }
 
-.condition
-{
+.condition {
   margin-top: 20px;
   font-size: 15px;
 }
 
-.temp
-{
+.temp {
   margin-top: 20px;
   font-size: 30px;
 }
 
-.detail
-{
-  background-color:rgba(245, 245, 245, 0.35);
+.detail {
+  background-color: rgba(245, 245, 245, 0.35);
   border-radius: 15px;
   margin: auto;
   margin-top: 20px;
-  width:200px;
+  width: 200px;
   flex-direction: row;
-  
 }
-
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

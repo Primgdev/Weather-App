@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { WiStrongWind } from "react-icons/wi";
 import { WiHumidity } from "react-icons/wi";
+import { CiSearch } from "react-icons/ci";
 import axios from "axios";
 import "./App.css";
 
@@ -15,13 +16,19 @@ function App() {
     patchy: "linear-gradient(to top, #09203f 0%, #537895 100%)",
     cloudy: "linear-gradient(to right, #a5a7a8, #e2e1e3, #fcf8f2)",
     clear: " linear-gradient(to right,#005C97,#363795)",
-  
   };
 
   const handleChange = (e) => {
     setError("");
     setLocation(e.target.value);
   };
+
+  const detectKey = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   const handleSubmit = async () => {
     try {
       const res = await axios.get(
@@ -33,9 +40,9 @@ function App() {
         setWeatherCondition(weatherConditions.sunny);
       } else if (res.data.current?.condition.text === "Patchy rain nearby") {
         setWeatherCondition(weatherConditions.patchy);
-      } else if (res.data.current?.condition.text === "Overcast "){
+      } else if (res.data.current?.condition.text === "Overcast ") {
         setWeatherCondition(weatherConditions.cloudy);
-      }else if (res.data.current?.condition.text === "Mist"){
+      } else if (res.data.current?.condition.text === "Mist") {
         setWeatherCondition(weatherConditions.clear);
       }
     } catch (e) {
@@ -53,25 +60,27 @@ function App() {
         background: weatherCondition,
       }}
     >
-      <h1>Weather App</h1>
+      <h1 className="title">Weather App</h1>
       <div className="search_bar">
         <input
-          className="searchInput"
+          className="searchInput" 
           type="text"
           placeholder="Please enter country"
           value={location}
           onChange={(e) => {
             handleChange(e);
           }}
+          onKeyUp={(e) => detectKey(e)}
         ></input>
-        <button
+
+        {/* <button
           className="searchButton"
           type="submit"
           onClick={handleSubmit}
           disabled={!location}
         >
           Search
-        </button>
+        </button> */}
       </div>
       {weatherData.current?.temp_c ? (
         <div className="result">
