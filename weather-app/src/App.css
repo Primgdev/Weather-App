@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -7,21 +8,19 @@
   pointer-events: none;
 }
 
-@font-face {
+/* @font-face {
   font-family: myFirstFont;
-  src: url();
-}
+  src: url(Font/Paris\ Avenue\ DEMO.ttf);
+} */
 
 
 .App {
-  background: rgb(106,59,217);
-  background: linear-gradient(45deg, rgba(106,59,217,1) 2%, rgba(210,42,175,0.7651435574229692) 97%);
-  height: 500px;
   width: 300px;
   margin:auto;
   margin-top:10px;
   border:2px solid black;
   border-radius: 50px;
+  
 }
 
 .search_bar {
@@ -41,10 +40,14 @@
   width: 150px;
 }
 
+
+
 .searchButton
 {
-  border-radius: 5px;
-  
+  border-radius: 10px;
+  background-color: white;
+
+
 }
 
 .result {
@@ -52,7 +55,8 @@
   color: black;
   margin:auto;
   line-height: 30px;
-  font-family: url(Font/Paris\ Avenue\ DEMO.ttf);
+  height: 100%;
+  /* font-family: url(Font/Paris\ Avenue\ DEMO.ttf); */
   
 }
 
@@ -66,20 +70,23 @@
 
 .area
 {
-  font-size: 20px;
+  font-size: 30px;
+  margin: auto;
   margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .condition
 {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .temp
 {
   margin-top: 20px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .detail
