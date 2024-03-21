@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import axios from "axios";
 import "./App.css";
 import Loader from "./components/loader";
+import Search from "./components/search";
 
 function App() {
   const [location, setLocation] = useState();
@@ -12,6 +13,7 @@ function App() {
   const [weatherCondition, setWeatherCondition] = useState();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
+  
 
   const weatherConditions = {
     sunny: "linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%)",
@@ -67,18 +69,10 @@ function App() {
         }}
       >
         <h1 className="title">Weather App</h1>
-        <div className="search_bar">
-          <input
-            className="searchInput"
-            type="text"
-            placeholder="Search"
-            value={location}
-            onChange={(e) => {
-              handleChange(e);
-            }}
-            onKeyUp={(e) => detectKey(e)}
-          ></input>
+      
           {loading && <Loader />}
+      <Search location ={location} handleChange = {handleChange} detectKey={detectKey}/>
+        
 
           {/* <button
           className="searchButton"
@@ -88,7 +82,7 @@ function App() {
         >
           Search
         </button> */}
-        </div>
+        {/* </div> */}
 
         {weatherData.current?.temp_c ? (
           <div className="result">
