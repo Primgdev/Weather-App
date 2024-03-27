@@ -14,6 +14,7 @@ export default function Search({location, handleChange, detectKey}) {
         onChange={(e) => handleChange(e)}
         onKeyUp={(e) => detectKey(e)}
       ></input>
+      <div>BSDK</div>
     </div>
   );
 }
