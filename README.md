@@ -12,8 +12,7 @@ In this weather app, you can get the weather details of a particular city or cou
 
 * ## How it looks 🎥
 
-  <img  src= "https://res.cloudinary.com/dvmumi2mb/image/upload/v1715496259/Screenshot_2024-05-12_at_16.38.46_h3nglq.png">
-  <img src = "https://res.cloudinary.com/dvmumi2mb/image/upload/v1715496259/Screenshot_2024-05-12_at_16.39.24_dscye2.png">
- <img src = "https://res.cloudinary.com/dvmumi2mb/image/upload/v1715496259/Screenshot_2024-05-12_at_16.40.12_evaeuu.png">
-  <img src ="https://res.cloudinary.com/dvmumi2mb/image/upload/v1715496260/Screenshot_2024-05-12_at_16.39.49_wi7wfo.png">
+
+
+https://github.com/PritamMaharjan86/Weather-App/assets/90535143/7cacac0c-d414-489f-9350-2e7debf0bbc8
 
