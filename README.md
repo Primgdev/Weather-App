@@ -6,4 +6,7 @@ In this weather app, you can get the weather details of a particular city or cou
 
 ## Technologies 🛠️
 * `React.js`
+* `HTML`
+* `CSS`
+* `Weather API`
 
